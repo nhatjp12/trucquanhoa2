@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doanh số bán hàng theo Mặt hàng</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Phân tích doanh số bán hàng</h1>
+        
+        <div class="upload-section">
+            <label for="dataFile" class="file-label">
+                <span class="file-input-text">Chọn file dữ liệu (CSV hoặc Excel)</span>
+                <input type="file" id="dataFile" accept=".csv, .xlsx, .xls" />
+            </label>
+            <p class="file-info">Hỗ trợ định dạng CSV, Excel (.xlsx, .xls)</p>
+        </div>
+        
+        <div id="loading" class="loading hidden">
+            <div class="spinner"></div>
+            <p>Đang xử lý dữ liệu...</p>
+        </div>
+        
+        <div id="chart-container" class="hidden">
+            <div id="chart"></div>
+            <!-- The group chart will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+    
+    <!-- Libraries -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.0/dist/xlsx.full.min.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
